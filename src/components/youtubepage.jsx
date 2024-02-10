@@ -79,11 +79,10 @@ export const YoutubePage = () => {
     const [animationKey, setAnimationKey] = useState(0); // Key to force re-render
     useEffect(() => {
         const interval = setInterval(() => {
-          // if (count < 1000) {
-            console.log('::: count', count);
+          if (count < 1000) {
             setCount(count + 1); // Increase count
             setAnimationKey(animationKey + 1); // Trigger re-render for animation
-          // }
+          }
         }, 5000); // Update count every 2 seconds
     
         return () => clearInterval(interval);
